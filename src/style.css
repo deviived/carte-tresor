@@ -1,0 +1,165 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 180rem;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/* CUSTOM */
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(145, 0, 34);
+    padding: 1rem;
+    display: inline-block;
+    cursor: pointer; /* "hand" cursor */
+    transition: border-color 0.75s, padding 0.5s;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: rgb(99, 8, 43);
+    padding: 1.2rem;
+}
+
+.inputfile + label * {
+	pointer-events: none;
+}
+
+.inputfile:disabled + label {
+    background-color: grey;
+    transition: none;
+    cursor: unset;
+}
+
+#map-display {
+  border: 1px solid #213547;
+  background-image: url("https://media.istockphoto.com/id/1358371948/photo/green-textured-cardboard-background.webp?b=1&s=170667a&w=0&k=20&c=UYO0LMMPT1FGIT43ypOcslaRVQo1d8lLSoWdgDTko_U=");
+}
+
+.map-cell {
+  width: 10rem;
+  height: 10rem;
+  max-width: 10rem;
+  max-height: 10rem;
+  min-width: 10rem;
+  min-height: 10rem;
+  /* background-color: #ffffff; */
+  color: whitesmoke;
+  overflow: hidden!important;
+  border: 1px solid #213547;
+}
+
+.img {
+  width: 10rem;
+  height: 10rem;
+  max-width: 10rem;
+  max-height: 10rem;
+  transform: translateY(-5rem) translateX(-5rem);
+  position: absolute;
+}
+
+.img-adv {
+  width: 8rem;
+  height: 8rem;
+  max-width: 8rem;
+  max-height: 8rem;
+  transform: translateY(-4rem) translateX(-4rem);
+  position: absolute;
+  z-index: 999;
+}
+
+.treasure-number {
+  position: absolute;
+  color: whitesmoke;
+  z-index: 100;
+  font-weight: 900;
+  font-size: 3rem;
+  -webkit-text-stroke-width: 3px; 
+  -webkit-text-stroke-color: black; 
+  transform: translateY(-2rem) translateX(-0.5rem);
+}
+
+.adv-name {
+  position: absolute;
+  color: whitesmoke;
+  z-index: 1500;
+  font-weight: 900;
+  font-size: 1.2rem;
+  -webkit-text-stroke-width: 1.2px; 
+  -webkit-text-stroke-color: black; 
+  transform: translateY(-5rem) translateX(-4rem);
+}
