@@ -1,6 +1,7 @@
 import './style.css'
 import {
     CARRIAGE_RETURN_REGEX,
+    TIME_BETWEEN_MOVES,
     generateMapTable,
     populateMap,
     processAdventurersSequence,
@@ -42,7 +43,7 @@ input?.addEventListener("change", function (e: any) {
 
     // process sequence movements from adventurers positions
     const new_promise = new Promise((resolve) => {
-      processAdventurersSequence(new_table, adventurers_indexes, 50, resolve);
+      processAdventurersSequence(new_table, adventurers_indexes, TIME_BETWEEN_MOVES, resolve);
     })
     new_promise.then(res => {
       input!.disabled = false;

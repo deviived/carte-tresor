@@ -1,3 +1,5 @@
+export const TIME_BETWEEN_MOVES = 100;
+
 export interface Position {
     x: number;
     y: number;
