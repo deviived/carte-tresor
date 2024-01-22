@@ -7,6 +7,8 @@
 ```yarn```
 
 ### install also package on /src/server folder
+```cd /src/server```
+
 ```yarn```
 
 ### launch server on /src/server
