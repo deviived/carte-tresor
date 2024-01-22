@@ -51,7 +51,7 @@ input?.addEventListener("change", function (e: any) {
         const url = window.URL.createObjectURL(new Blob([response.data]));
         const link = document.createElement("a");
         link.href = url;
-        link.setAttribute("download", "file.txt"); //or any other extension
+        link.setAttribute("download", "map_output.txt"); //or any other extension
         document.body.appendChild(link);
         link.click();
       })
